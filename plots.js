@@ -35,4 +35,13 @@ function buildMetadata(sample) {
       PANEL.append("h6").text("BBTYPE"+ ": "+ result.bbtype);
       PANEL.append("h6").text("WFREQ"+ ": "+ result.wfreq);
     });
+};
+
+function buildCharts(sample) {
+  d3.json("samples.json").then((data) => {
+    var sample = data.samples;
+    var resultArray = sample.filter(sampleObj => sampleObj.id == sample);
+    console.log(resultArray);
+
+  });
 }
