@@ -40,6 +40,7 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
   d3.json("samples.json").then((data) => {
     var sample = data.samples;
+    console.log(sample);
     var resultArray = sample.filter(sampleObj => sampleObj.id == sample);
     console.log(resultArray);
 
