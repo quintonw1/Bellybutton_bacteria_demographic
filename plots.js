@@ -2,7 +2,6 @@ function init() {
     var selector = d3.select("#selDataset");
   
     d3.json("samples.json").then((data) => {
-      console.log(data);
       var sampleNames = data.names;
       sampleNames.forEach((sample) => {
         selector
@@ -54,7 +53,8 @@ function buildCharts(personID) {
       return text;
     });
 
-    otuLabels = personObj.otu_labels.slice(0,9);
+    otuLabels = personObj.otu_labels.slice(0,10);
+    console.log(otuLabels);
 
     var traceBar = {
       x: values,
